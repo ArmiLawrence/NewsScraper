@@ -1,0 +1,55 @@
+<div class="container"> 
+  <div class="container-fluid bg-light">
+
+      <div class="row justify-content-md-center">
+        <div class="col-md-12 justify-content-center">
+
+              <h2 class="text-muted">Notes</h2>
+              <div id="notes">
+                <ul>
+                  {{#each notes}}
+                            <div class="panel panel-default">
+                                <h4>{{this.title}}</h4>                    
+                                {{!-- <p data-id= {{this._id}}> {{this.summary}}</p> --}}
+                                <p data-id= {{this._id}}> {{this.body}}</p>
+                                <button type="button" class="btn btn-secondary delete" id="deleteNote" data-id={{this._id}}>Delete Note</button>
+                                </br>
+                        </div>
+                {{/each}}
+              </ul>
+              </div>
+
+      
+        </div>
+
+      </div>
+
+  </div>
+
+  <br>
+
+</div>
+
+<script type="text/javascript">
+
+// When you click the deletenote button
+$(document).on("click", "#deleteNote", function() {
+  // Grab the id associated with the article from the submit button
+  var thisId = $(this).attr("data-id");
+
+  // Run a DELETE request to change the note, using what's entered in the inputs
+  $.ajax({
+    method: "DELETE",
+    url: "/notes/" + thisId
+  })
+    // With that done
+    .then(function(data) {
+      // Log the response
+      console.log(data);
+    // Reload the page to get the updated list
+      location.reload(); 
+    });
+
+});
+    
+</script>

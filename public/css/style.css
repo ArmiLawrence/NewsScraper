@@ -1,0 +1,5 @@
+/* Body of the Page - all htmls*/
+
+html, body {
+    background-image: url("../img/NYT.jpg");
+}
