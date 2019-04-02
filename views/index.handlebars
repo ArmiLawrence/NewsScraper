@@ -11,8 +11,7 @@
                     {{#unless this.saved}}
                       <div class="panel panel-default">
                           <h4>{{this.title}}</h4>                    
-                          {{!-- <p data-id= {{this._id}}> {{this.summary}}</p> --}}
-                          <p data-id= {{this._id}}> {{this.link}}</p>
+                          <p> {{this.summary}}</p>
                           <a href={{this.link}}>{{this.link}}</a>
                           <br>
                           <button type="button" class="btn btn-secondary save" id= "saveArticle" data-id={{this._id}}>Save Article</button>

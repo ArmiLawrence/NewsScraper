@@ -36,9 +36,9 @@ module.exports = function (app) {
             var result = {};
   
             // Add the text and href of every link, and save them as properties of the result object
-            result.link = $(element).find("a").attr("href");
-            result.title = $(element).find("span").text().trim();
-            result.summary = $(element).find("li").text().trim();
+            result.link = $(this).find("a").attr("href");
+            result.title = $(this).find("a").text().trim();
+            result.summary = $(this).find("p").text().trim();
   
             // Create a new Article using the `result` object built from scraping
             db.Article.create(result)
