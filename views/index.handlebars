@@ -5,6 +5,7 @@
         <div class="col-md-6 justify-content-center">
 
               <h2 class="text-muted">Articles</h2>
+              <button type="button" class="btn btn-primary clear" id= "clearArticle" >Clear Articles</button>
               <div id="articles">
                 <ul>
                   {{#each articles}}
@@ -102,6 +103,24 @@ $(document).on("click", "p", function() {
     });
 });
 
+// When you click the clearArticles button
+$(document).on("click", "#clearArticle", function() {
+
+  // Run a POST request to change the note, using what's entered in the inputs
+  $.ajax({
+    method: "DELETE",
+    url: "/articles"
+  })
+    // With that done
+    .then(function(data) {
+      // Log the response
+      console.log(data);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+
+});
+  
 // When you click the savenote button
 $(document).on("click", "#savenote", function() {
   // Grab the id associated with the article from the submit button
@@ -130,8 +149,6 @@ $(document).on("click", "#savenote", function() {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
-  
-
   
 </script>
 
