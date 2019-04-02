@@ -16,7 +16,7 @@ The Saved Articles page allows a user to also click and save notes. Once the use
 
 The Notes page has all of the notes the user has created. This is the page where the user can delete the notes they have created, as creating and updating can be done through the Home and Saved Articles pages.
 
-![New York Times Scraper](../NewsScraper/public/img/NYTScrape.PNG)
+![New York Times Scraper](/public/img/NYTScrape.PNG)
 
 * Node packages downloaded for use in this app:
     * [Axios](https://www.npmjs.com/package/axios)
