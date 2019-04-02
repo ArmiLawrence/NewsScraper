@@ -11,8 +11,7 @@
                     {{#if this.saved}}
                             <div class="panel panel-default">
                                 <h4>{{this.title}}</h4>                    
-                                {{!-- <p data-id= {{this._id}}> {{this.summary}}</p> --}}
-                                <p data-id= {{this._id}}> {{this.link}}</p>
+                                <p data-id= {{this._id}}> {{this.summary}}</p>
                                 <a href={{this.link}}>{{this.link}}</a>
                                 <br>
                                 <button type="button" class="btn btn-secondary delete" id="deleteArticle" data-id={{this._id}}>Delete Article</button>

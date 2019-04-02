@@ -29,11 +29,9 @@
                                 </a>
                             </li>
                             <li>
-                                <form action="/scrape" method="GET">
-                                    <button type="button" class="btn btn-primary" id="scrape" >
-                                        <font color="white">Scrape Articles</font>
-                                    </button>
-                                </form>
+                                <button type="button" class="btn btn-primary" id="scrape" >
+                                    <font color="white">Scrape Articles</font>
+                                </button>
                             </li>             
                         </nav>
                     </div>
@@ -55,3 +53,25 @@
 
 	</body>
 </html>
+
+<script type="text/javascript">
+
+// When you click the savenote button
+$(document).on("click", "#scrape", function() {
+
+  // Run a PUT request to change the note, using what's entered in the inputs
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+  })
+    // With that done
+    .then(function(data) {
+      // Log the response
+      console.log(data);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+
+});
+
+</script>
