@@ -4,7 +4,7 @@ New York Times Scraper
 
 The goal of the New York Time Scraper app is to scrape the New York Times website for news articles. 
 
-The Nav Bar on the top has three links and a button.
+* The Nav Bar on the top has three links and a button.
     * The "Home" link allows a user to return to the main page, where the user can see their articles and notes. 
     * The "Saved Articles" link allows a user to view all of their saved articles or notes for review. 
     * The "Notes" link allows the user to review all of their notes and delete notes if they desire. 
@@ -16,7 +16,7 @@ The Saved Articles page allows a user to also click and save notes. Once the use
 
 The Notes page has all of the notes the user has created. This is the page where the user can delete the notes they have created, as creating and updating can be done through the Home and Saved Articles pages.
 
-![New York Times Scraper](../NewsScraper/public/img/NYTScrape.PNG)
+![New York Times Scraper](/public/img/NYTScrape.PNG)
 
 * Node packages downloaded for use in this app:
     * [Axios](https://www.npmjs.com/package/axios)
